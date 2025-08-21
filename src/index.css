@@ -1,0 +1,115 @@
+@import url("./styles/header.css");
+@import url("./styles/footer.css");
+@import url("./styles/threads-page.css");
+@import url("./styles/add-thread-page.css");
+@import url("./styles/threads-detail-page.css");
+@import url("./styles/login-page.css");
+@import url("./styles/register-page.css");
+@import url("./styles/leaderboards-page.css");
+
+:root {
+  --primary: #007bff;
+  --primary-hover: #0056b3;
+  --primary-light: #e6f2ff;
+
+  --secondary: #6c757d;
+  --secondary-hover: #5a6268;
+
+  --bg-body: #f0f3f6;
+  --bg-card: #ffffff;
+
+  --border-color: #dee2e6;
+
+  --text-primary: #212529;
+  --text-muted: #6c757d;
+
+  --success: #28a745;
+  --success-hover: #218838;
+  --success-light: #e9f6ec;
+
+  --warning: #ffc107;
+  --warning-hover: #e0a800;
+  --warning-light: #fff8e6;
+
+  --danger: #dc3545;
+  --danger-hover: #c82333;
+  --danger-light: #faeaec;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 8px;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main {
+  flex: 1;
+  padding: 1.1rem 1.9rem;
+}
+
+/* --- Loading --- */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--background);
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid var(--on-background);
+  border-top: 5px solid var(--primary);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+.loading-text {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--primary);
+  letter-spacing: 1px;
+  animation: fadeIn 1.5s ease-in-out infinite;
+}
+
+/* Animasi */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.loading-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}

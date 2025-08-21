@@ -1,0 +1,122 @@
+.leaderboards-page {
+  margin: 2rem auto;
+}
+
+.leaderboards-page__container {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.leaderboards-page__header {
+  text-align: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.leaderboards-page__header h2 {
+  color: var(--text-primary);
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.leaderboards-page__header p {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.leaderboards-page__content {
+  padding: 1rem 2rem 2rem;
+}
+
+.leaderboards-page__list-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem 1rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.leaderboards-page__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.leaderboards-page__item:hover {
+  background-color: var(--bg-body);
+}
+
+/* Memberi highlight untuk 3 peringkat teratas */
+.leaderboards-page__item:nth-child(1) {
+  background-color: #fffbeb;
+}
+.leaderboards-page__item:nth-child(2) {
+  background-color: #f8f9fa;
+}
+.leaderboards-page__item:nth-child(3) {
+  background-color: #fbf5ef;
+}
+
+.leaderboards-page__user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.leaderboards-page__user-rank {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-muted);
+  width: 20px;
+  text-align: center;
+}
+
+.leaderboards-page__user-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border-color);
+}
+
+.leaderboards-page__user-name {
+  margin: 0;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.leaderboards-page__user-score {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+/* ========================================= */
+/* == Media Query untuk Responsivitas == */
+/* ========================================= */
+@media (max-width: 576px) {
+  .leaderboards-page__container {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+  .leaderboards-page__content {
+    padding: 1rem;
+  }
+  .leaderboards-page__user-name {
+    font-size: 0.9rem;
+  }
+  .leaderboards-page__user-score {
+    font-size: 1rem;
+  }
+}

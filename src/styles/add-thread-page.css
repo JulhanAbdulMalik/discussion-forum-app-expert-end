@@ -1,0 +1,131 @@
+.add-thread-page {
+  margin: 2rem auto;
+}
+
+.add-thread-page__container {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.add-thread-page__header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.add-thread-page__header h2 {
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.add-thread-page__header p {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.add-thread-page__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.form-group input,
+.form-group textarea {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 1rem;
+  color: var(--text-primary);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.2);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-group button {
+  align-self: flex-end;
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+.form-group button:hover {
+  background-color: var(--primary-hover);
+}
+
+.form-group button:active {
+  transform: scale(0.97);
+}
+
+.add-thread-page__diskusi {
+  background-color: var(--bg-card);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.add-thread-page__diskusi textarea {
+  width: 100%;
+  min-height: 100px;
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  resize: vertical;
+  margin-bottom: 1rem;
+}
+
+.add-thread-page__diskusi textarea:focus {
+  outline: none;
+}
+
+.add-thread-page__diskusi button {
+  display: block;
+  margin-left: auto;
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-thread-page__diskusi button:hover {
+  background-color: var(--primary-hover);
+}
