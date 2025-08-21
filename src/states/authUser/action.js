@@ -60,5 +60,4 @@ export {
   unsetAuthUserActionCreator,
   asyncSetAuthUser,
   asyncUnsetAuthUser,
-  // asyncRegisterUser,
 };
