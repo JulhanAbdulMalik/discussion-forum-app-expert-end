@@ -6,6 +6,14 @@ import LeaderboardList from './LeaderboardList';
 
 expect.extend(matchers);
 
+/**
+ * Skenario Test React Component LeaderboardList
+ *
+ * - should render headers correctly
+ * - should render the list of users and their scores correctly
+ * - should not render any user items if the leaderboard is empty
+ */
+
 describe('LeaderboardList component', () => {
   // Mock data untuk disimulasikan sebagai prop 'leaderboard'
   const mockLeaderboard = [
