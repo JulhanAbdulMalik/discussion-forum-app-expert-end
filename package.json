@@ -8,7 +8,9 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "e2e": "cypress run",
+    "e2e:open": "cypress open"
   },
   "dependencies": {
     "@dimasmds/react-redux-loading-bar": "^5.0.10",
@@ -28,8 +30,10 @@
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^5.0.1",
+    "cypress": "^15.0.0",
     "eslint": "^9.33.0",
     "eslint-config-dicodingacademy": "^0.9.5",
+    "eslint-plugin-cypress": "^5.1.1",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
