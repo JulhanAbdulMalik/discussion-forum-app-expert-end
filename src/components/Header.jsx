@@ -8,7 +8,7 @@ const Header = ({ authUser }) => {
     <header className="app-header">
       <div className="header-container">
         <div className="header-logo">
-          <Link to="/">Discussion Forum App - byJulhan</Link>
+          <Link to="/">Discussion Forum - byJulhan</Link>
         </div>
 
         <div className="header-actions">
