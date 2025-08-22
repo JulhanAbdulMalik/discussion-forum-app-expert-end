@@ -10,12 +10,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+      # 1. Checkout kode dari repository
+      - name: Check out repository code
+        uses: actions/checkout@v4 # Versi diperbarui untuk best practice
+
+      # 2. Setup Node.js
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v4 # Versi diperbarui
         with:
-          node-version: ${{ matrix.node-version }}
-      - name: npm install and test
-        run: |
-          npm install
-          npm run ci:test
+          # Menggunakan versi Node.js spesifik, bukan matrix
+          # karena tidak ada 'strategy matrix' yang didefinisikan
+          node-version: '20.x'
+          cache: 'npm'
+
+      # 3. Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # 4. Install browser untuk Playwright
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      # 5. Jalankan tes
+      - name: Run CI tests
+        run: npm run ci:test
